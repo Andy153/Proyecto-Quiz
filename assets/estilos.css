@@ -1,0 +1,129 @@
+
+
+body {
+    background-image: url(https://i.pinimg.com/originals/99/d3/15/99d3157be2bbf1d17c8589458a5b8896.jpg);
+}
+
+header {
+    background-image: url(https://wallpaperaccess.com/full/2384075.jpg);
+    height: 150px;
+    border-radius:50px;
+   
+}
+
+h1 {
+    
+    font-size: 50px;
+    text-align: center;
+    margin-top: auto;
+    line-height: 130px;
+}
+
+
+.question-container{
+    margin: auto;
+    padding: 5px;
+    width: 80vw;
+    height: 10vh;
+    background-color: #c7dddf;
+    font-size: x-large;
+    text-align: center;
+    text-align: center;
+      
+}
+
+.result{
+    margin: auto;
+    padding: 5px;
+    width:80vw;
+    height: 10vh;
+    text-align: center;
+    font-size: 50px;
+      
+}
+
+.option-container{
+    display: flex;
+    justify-content: space-around; 
+    margin: auto;
+    padding: 10px;
+    width: 80vw;
+    height: 20vh;
+    background-color: #9eb1b3;  
+}
+.option{    
+    padding: 10px;
+    width: 10vw;
+    height: 10vh;
+    font-size: larger;
+    border-radius: 25%;
+    background-color: lightskyblue;
+}
+
+.navigation{
+    width: 80vw;
+    height: 10vh;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#c7dddf;
+}
+
+.Comprobar,.Siguiente{
+    width:30vw;
+    height: 8vh;
+    padding: 5px;
+    font-size: larger;
+}
+
+.Comprobar{
+    
+    background-color: #50DBB4;
+}
+.Siguiente{
+    color: white;
+    background-color: #BF3325;
+}
+
+.option:hover{
+    background-color: lightgoldenrodyellow;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #263238;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.iconos{
+    padding-top: 1rem;
+}
+
+.iconos a{
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0.5rem;
+    color: #f4f4f4;
+}
+
+.company-name{
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+    html{
+    font-size: 50%;
+    }
+}    
