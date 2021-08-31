@@ -194,3 +194,12 @@ if (id < 8) {
 }
 
 })
+
+//Esto es para luego de darle click al boton "siguiente" la opción elegida por el usuario se vuelva al color original
+function myFunction() {
+    document.getElementById("op1").style.backgroundColor = "lightskyblue";
+    document.getElementById("op2").style.backgroundColor = "lightskyblue";
+    document.getElementById("op3").style.backgroundColor = "lightskyblue";
+    document.getElementById("op4").style.backgroundColor = "lightskyblue";
+  }
+
