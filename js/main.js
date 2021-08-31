@@ -79,13 +79,21 @@ var Questions = [
     {
         id: 8,
         q: '¿Cuál es la película más taquilllera de la historia?',
-        a:  [{ text: "Matrix", isCorrect: true},
+        a:  [{ text: "Matrix", isCorrect: false},
         { text: "Rescatando al Soldado Ryan", isCorrect: false },
         { text: "Avengers: Endgame", isCorrect: true },
         { text: "Titanic", isCorrect: false}
         ]
     },
 
+    { id: 9,
+        q: "Que te parecio el quiz? ",
+        a: [{ text: "Muy bueno", isCorrect: undefined},
+        {text: "Malo", isCorrect: undefined},
+        { text: "Mas o menos", isCorrect: undefined },
+        { text: "Horrible", isCorrect: undefined},
+    ]
+    },
 ];
 
 
@@ -174,6 +182,10 @@ evaluate[0].addEventListener("click", () => {
         result[0].innerHTML = "Falso";
         result[0].style.color = "red";
     }
+    if (selected == "undefined") {
+        result[0].innerHTML = "Gracias por ayudarnos"
+        result[0].style.color = "black";
+    }
 })
 }
 
@@ -187,7 +199,7 @@ var id = 0;
 
 next.addEventListener("click", () => {
 start = false;
-if (id < 8) {
+if (id < 9) {
     id++;
     iterar(id);
     console.log(id);
@@ -203,3 +215,22 @@ function myFunction() {
     document.getElementById("op4").style.backgroundColor = "lightskyblue";
   }
 
+  const reset = document.getElementsByClassName('restartButton')[0];
+  var id= 0
+
+  reset.addEventListener("click", () => {
+    if (id < 10) {
+        id = 0;
+        iterar(id)
+        console.log(id);
+    }
+  })
+
+
+  localStorage.setItem('Creador', 'Andrés')
+  localStorage.Apellido = 'Garcia Skinner'
+
+  let firstName = localStorage.getItem('Creador'),
+    lastName  = localStorage.Apellido
+
+ console.log(`Hola, mi nombre es ${firstName} ${lastName} y soy el creador de este quiz`)
