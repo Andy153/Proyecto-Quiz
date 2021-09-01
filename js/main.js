@@ -99,17 +99,12 @@ var Questions = [
 
 var start = true;
 
-
 function iterar(id) {
-
 
 var result = document.getElementsByClassName("result");
 result[0].innerText = "";
 
-
 const question = document.getElementById("question");
-
-
 
 question.innerText = Questions[id].q;
 
@@ -135,6 +130,8 @@ op4.value = Questions[id].a[3].isCorrect;
 var selected = "";
 
 //En esta parte cuando el usuario aprete cualquiera de las cuatro opciones la seleccionada se convertira de color amarrilo y las otras de celeste
+
+//opcion 1
 op1.addEventListener("click", () => {
     op1.style.backgroundColor = "lightgoldenrodyellow";
     op2.style.backgroundColor = "lightskyblue";
@@ -143,7 +140,7 @@ op1.addEventListener("click", () => {
     selected = op1.value;
 })
 
-
+//opcion 2
 op2.addEventListener("click", () => {
     op1.style.backgroundColor = "lightskyblue";
     op2.style.backgroundColor = "lightgoldenrodyellow";
@@ -152,7 +149,7 @@ op2.addEventListener("click", () => {
     selected = op2.value;
 })
 
-
+//opcion 3
 op3.addEventListener("click", () => {
     op1.style.backgroundColor = "lightskyblue";
     op2.style.backgroundColor = "lightskyblue";
@@ -161,7 +158,7 @@ op3.addEventListener("click", () => {
     selected = op3.value;
 })
 
-
+//opcion 4
 op4.addEventListener("click", () => {
     op1.style.backgroundColor = "lightskyblue";
     op2.style.backgroundColor = "lightskyblue";
@@ -170,10 +167,10 @@ op4.addEventListener("click", () => {
     selected = op4.value;
 })
 
-
+//declarando la variable del boton comprobar
 const evaluate = document.getElementsByClassName("Comprobar");
 
-// metodo de evaluación
+// metodo de evaluación usando un evento donde presionando un click se ejecuta el codigo
 evaluate[0].addEventListener("click", () => {
     if (selected == "true") {
         result[0].innerHTML = "Correcto";
@@ -215,6 +212,7 @@ function myFunction() {
     document.getElementById("op4").style.backgroundColor = "lightskyblue";
   }
 
+  //boton de reseteo para volver al principio del quiz
   const reset = document.getElementsByClassName('restartButton')[0];
   var id= 0
 
@@ -226,7 +224,7 @@ function myFunction() {
     }
   })
 
-
+//almacenamiento de datos en el storage y recuperación a traves de console.log
   localStorage.setItem('Creador', 'Andrés')
   localStorage.Apellido = 'Garcia Skinner'
 
@@ -234,3 +232,13 @@ function myFunction() {
     lastName  = localStorage.Apellido
 
  console.log(`Hola, mi nombre es ${firstName} ${lastName} y soy el creador de este quiz`)
+
+ //Objetos (en este caso el array de las preguntas) javascript en Jason. Usando el console.log se puede ver todo el array escrito del codigo.
+ const enJSON = JSON.stringify(Questions);
+ console.log(enJSON);
+ console.log(typeof Questions);
+ console.log(typeof enJSON);
+ 
+ //con este metodo escribiendo "Questions" en la consola se devuelve cada pregunta (solo la pregunta y no las opciones a responder como es el caso de arriba) con su respectivo id así quedando más ordenado que la parte de arriba.
+const producto2 = JSON.parse(localStorage.getItem("Questions"));
+console.log(Questions.id);     

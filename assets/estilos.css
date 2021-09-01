@@ -116,6 +116,8 @@ h1 {
     margin-top: 0.5rem;
 }
 
+
+/*Media queries para distintos dispositivos*/
 @media (max-width: 500px){
     html{
         font-size: 50%;
